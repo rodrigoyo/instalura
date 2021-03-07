@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Logo } from '../../../theme/Logo';
+import { Button } from '../Button';
 import { MenuWrapper } from './styles/MenuWrapper';
 
 export default function Menu() {
@@ -25,15 +26,21 @@ export default function Menu() {
                 <Logo />
             </MenuWrapper.LeftSide>
             <MenuWrapper.CentralSide>
-                {links.map((link) => (<li><a href={link.url}>{link.texto}</a></li>))}
+                {links.map((link) => (
+                    <li key={link.url}>
+                        <a href={link.url}>
+                            {link.texto}
+                        </a>
+                    </li>
+                ))}
             </MenuWrapper.CentralSide>
             <MenuWrapper.RightSide>
-                <button>
+                <Button ghost>
                     Entrar
-        </button>
-                <button>
+                </Button>
+                <Button variant="secondary.main">
                     Cadastrar
-        </button>
+                </Button>
             </MenuWrapper.RightSide>
         </MenuWrapper>
     )
