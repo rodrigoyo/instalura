@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components';
+import get from 'lodash/get';
 
 const ButtonGhost = css`
-    color: #FB7B6B;
+    color: ${(props) => get(props.theme, `colors.${props.variant}.color`)};
     background: transparent;
 `;
 
 const ButtonDefault = css`
-    background-color: ${(props) => props.theme.colors.primary.main.color};
-    color: ${(props) => props.theme.colors.primary.main.contrastText};
+    background-color: ${(props) => get(props.theme, `colors.${props.variant}.color`)};
+    color: ${(props) => get(props.theme, `colors.${props.variant}.contrastText`)};
 `;
 
 export const Button = styled.button`
@@ -17,7 +18,9 @@ export const Button = styled.button`
     font-weight: bold;
     opacity: 1;
     border-radius: 8px;
-    ${(props) => (props.ghost) ? ButtonGhost : ButtonDefault}
+    transition: opacity ${({ theme }) => theme.transition};
+    border-radius: ${({ theme }) => theme.borderRadius};
+    ${({ ghost }) => ghost ? ButtonGhost : ButtonDefault}
     &:hover,
     &:focus {
         opacity: .5;
