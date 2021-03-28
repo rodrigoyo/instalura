@@ -23,7 +23,7 @@ export default function Menu() {
     return (
         <MenuWrapper>
             <MenuWrapper.LeftSide>
-                <Logo />
+                <Logo dark />
             </MenuWrapper.LeftSide>
             <MenuWrapper.CentralSide>
                 {links.map((link) => (

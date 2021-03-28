@@ -22,6 +22,9 @@ const FooterWrapper = styled.footer`
       opacity: .5;
     }
   }
+  p {
+    color: ${({ theme }) => theme.colors.tertiary.main.contrastText};
+  }
 `;
 
 export default function Footer(props) {

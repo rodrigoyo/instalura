@@ -35,12 +35,39 @@ const colors = {
     },
   },
   modes: {
-    dark: {},
+    dark: {
+      background: {
+        main: {
+          color: '#030506',
+        },
+      },
+      borders: {
+        main: {
+          color: '#181F22',
+        },
+      },
+      primary: {
+        main: {
+          color: '#F27895',
+        }
+      },
+      secondary: {
+        main: {
+          color: '#FFA59A',
+        }
+      },
+      tertiary: {
+        main: {
+          color: '#FFFFFF',
+          contrastText: '#D4D4D4',
+        }
+      }
+    },
   },
 };
 
 export default {
-  colors,
+  colors: colors.modes.dark,
   borderRadius: '12px',
   fontFamily: '\'Rubik\', sans-serif',
   transition: '200ms ease-in-out',
