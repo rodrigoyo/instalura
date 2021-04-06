@@ -1,7 +1,6 @@
 import React from 'react';
 
 export function Logo({ dark }) {
-    console.log(dark);
 
     const svgLogo = (dark) ?
         <svg width="96" height="24" viewBox="0 0 131 32" fill="none" xmlns="http://www.w3.org/2000/svg">
