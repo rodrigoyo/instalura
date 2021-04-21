@@ -2,7 +2,7 @@ import Footer from '../src/components/commons/Footer'
 import Menu from '../src/components/commons/Menu'
 import { Text } from '../src/components/foundation/Text'
 import { Button } from '../src/components/commons/Button'
-import { Grid } from '../src/components/layout/Grid'
+import { Grid } from '../src/components/foundation/layout/Grid'
 
 export default function Home() {
   return (
@@ -18,8 +18,12 @@ export default function Home() {
       <Grid.Container>
         <Grid.Row>
           <Grid.Col
-            offset={1}
             value={{ xs: 12, md: 5 }}
+            offset={{ xs: 0, md: 1 }}
+            display="flex"
+            alignItems="flex-start"
+            justifyContent="center"
+            flexDirection="column"
           >
             <div>
               <Text
