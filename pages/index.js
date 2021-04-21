@@ -3,16 +3,20 @@ import Menu from '../src/components/commons/Menu'
 import { Text } from '../src/components/foundation/Text'
 import { Button } from '../src/components/commons/Button'
 import { Grid } from '../src/components/foundation/layout/Grid'
+import { Box } from '../src/components/foundation/layout/Box'
 
 export default function Home() {
   return (
-    <div style={{
-      flex: '1',
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-    }}>
+    <Box
+      flex="1"
+      display="flex"
+      flexWrap="wrap"
+      flexDirection="column"
+      justifyContent="space-between"
+      backgroundImage="url(/images/bubbles_dark.svg)"
+      backgroundRepeat="no-repeat"
+      backgroundPosition="bottom right"
+    >
       <Menu />
 
       <Grid.Container>
@@ -73,6 +77,6 @@ export default function Home() {
         </Grid.Row>
       </Grid.Container>
       <Footer />
-    </div>
+    </Box>
   )
 }
