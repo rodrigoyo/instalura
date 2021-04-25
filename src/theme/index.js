@@ -1,4 +1,4 @@
-import { typographyVariants } from './typographyVariants';
+import typographyVariants from './typographyVariants';
 
 const colors = {
   background: {
@@ -51,19 +51,19 @@ const colors = {
       primary: {
         main: {
           color: '#F27895',
-        }
+        },
       },
       secondary: {
         main: {
           color: '#FFA59A',
-        }
+        },
       },
       tertiary: {
         main: {
           color: '#FFFFFF',
           contrastText: '#D4D4D4',
-        }
-      }
+        },
+      },
     },
   },
 };

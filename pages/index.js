@@ -1,9 +1,10 @@
-import Footer from '../src/components/commons/Footer'
-import Menu from '../src/components/commons/Menu'
-import { Text } from '../src/components/foundation/Text'
-import { Button } from '../src/components/commons/Button'
-import { Grid } from '../src/components/foundation/layout/Grid'
-import { Box } from '../src/components/foundation/layout/Box'
+import React from 'react';
+import Footer from '../src/components/commons/Footer';
+import Menu from '../src/components/commons/Menu';
+import { Text } from '../src/components/foundation/Text';
+import Button from '../src/components/commons/Button';
+import Grid from '../src/components/foundation/layout/Grid';
+import Box from '../src/components/foundation/layout/Box';
 
 export default function Home() {
   return (
@@ -65,11 +66,12 @@ export default function Home() {
                 Cadastrar
               </Button>
             </div>
-            </Grid.Col>
+          </Grid.Col>
           <Grid.Col
             value={{ xs: 12, md: 6 }}
           >
             <img
+              alt="Imagem de celular com páginas internas do projeto com o perfil do Cage"
               style={{ display: 'block', margin: 'auto' }}
               src="https://bootcamp-alura-01-git-modulo01.omariosouto.vercel.app/images/phones.png"
             />
@@ -78,5 +80,5 @@ export default function Home() {
       </Grid.Container>
       <Footer />
     </Box>
-  )
+  );
 }
